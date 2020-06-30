@@ -77,10 +77,24 @@ Running
 helm status demo-guestbook
 ```
 
- will show the revision number of the current release. If we need to rollback to previous version because of whatever reason then 
+ will show the revision number of the current release. If we need to rollback to previous version because of whatever reason then
 
  ``` bash
 helm rollback demo-guestbook 1
  ```
 
 will rollback the app to the revision 1
+
+Running
+
+``` bash
+helm history demo-guestbook
+```
+
+can reveal the information about the change history for demo-guestbook release.
+
+``` bash
+helm uninstall demo-guestbook
+```
+
+will uninstall the release from the cluster with all the kubernetes objects and helm secrets in the cluster.
