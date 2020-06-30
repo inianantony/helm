@@ -1,0 +1,6 @@
+apiVersion: V2 # helm api version
+type: application
+name: guestbook
+appVersion: "1.1" # applications version
+version: 0.1.0 # chart version to track change in this chart file
+description: a helm chart for guestbook 1.0
