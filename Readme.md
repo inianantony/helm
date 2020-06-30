@@ -17,7 +17,7 @@ helm version --short
 helm env
 ```
 
-Helm uses the kubectl Kubernetes context and the namespace.
+Helm uses the kubectl's Kubernetes context and the namespace.
 
 Configure helm to update its repo by
 
@@ -53,6 +53,12 @@ helm install demo-guestbook guestbook
 ```
 
 In the above command `demo-guestbook` is the name of the deployment and the `guestbook` is the name if the helm chart which is the folder location where helm can find the `Chart.yaml` and the `templates`
+
+``` bash
+minikube ip
+```
+
+will get us the ip of minikube and we can bind it with `frontend.minikube.local` and `backend.minikube.local` in the hosts file for us to access the application from the browser <http://frontend.minikube.local>
 
 we can use
 
