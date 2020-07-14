@@ -35,6 +35,26 @@ minikube addons enable ingress
 
 Since our environment is ready, we can create new helm chart by creating a folder `chart`. Inside the folder create a folder called `guestbook` and this `guestbook` will be the name of the helm chart. Inside the `guestbook` folder, create a `Chart.yaml` file with the following lines
 
+### Folder Structure
+
+The folder that the `Chart.yaml` resides is the chart name for helm. In our case `guestbook`. This folder contaies `Chart.yaml` file describing the metadata & properties of chart.
+
+```
+-- ChartName (folder)
+   |
+   |-- Metadata ( Chart.yaml)
+   |
+   |-- templates ( Kubernetes objects files ie the yaml files)
+       |
+       |-- service.yaml
+       |
+       |-- deployment.yaml
+       |
+       |-- _helpers.tpl ( some helper functions for placeholder values )   
+   |
+   |-- values.yaml ( values that replaces the placeholder )
+```
+
 ``` yaml
 apiVersion: v2 # helm api version, Helm 3 is v2
 type: application
