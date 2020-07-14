@@ -44,6 +44,8 @@ The folder that the `Chart.yaml` resides is the chart name for helm. In our case
    |
    |-- Metadata ( Chart.yaml)
    |
+   |-- Readme.md ( describe the chart )
+   |
    |-- templates ( Kubernetes objects files ie the yaml files)
        |
        |-- service.yaml
@@ -51,6 +53,10 @@ The folder that the `Chart.yaml` resides is the chart name for helm. In our case
        |-- deployment.yaml
        |
        |-- _helpers.tpl ( some helper functions for placeholder values )   
+       |
+       |-- Notes.txt ( describe about the application like the port, url etc )
+   |
+   |-- values.schema.json ( describes the structure of the value.yaml file )
    |
    |-- values.yaml ( values that replaces the placeholder )
 ```
